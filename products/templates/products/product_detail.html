@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+
+{{object.title}}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="">
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h5 class="text-white">Categories</h5>
+        <!--Accordion wrapper-->
+        <div class="accordion md-accordion accordion-3 z-depth-1-half" id="accordionEx194" role="tablist"
+          aria-multiselectable="true">
+
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="heading4">
+              <span data-toggle="collapse" data-parent="#accordionEx194" href="#collapse4" aria-expanded="false"
+                aria-controls="collapse4">
+                <h5 class="mb-0 text-white">
+                  Riding
+                </h5>
+              </span>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapse4" class="collapse show" role="tabpanel" aria-labelledby="heading4"
+              data-parent="#accordionEx194">
+              <div class="card-body pt-0">
+                <ul>
+                {% for el in riding %}
+              <li>
+                <a href='/products/riding/{{el.slug}}'>{{el.title}}</a>
+              </li>
+              {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion card -->
+
+
+
+        </div>
+        <!--/.Accordion wrapper-->
+      </div>
+
+        <!--Product list item-->
+      <div class="col-12 col-md-8">
+        <h4 class="text-white text-capitalize">{{object.sub_category}} | {{object.title}}</h4>
+        <div class="row ml-1 mt-3">
+            <div class="col-9">
+                <img class="img-fluid" src="{{object.image.url}}" alt="{{object.title}}" />
+            </div>
+            <div class="col-3 text-white">
+                <p>{{object.title}}</p>
+                <p>SKU# {{object.sku}}</p>
+                <p>Description <br />{{object.desc}}</p>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+{% endblock %}

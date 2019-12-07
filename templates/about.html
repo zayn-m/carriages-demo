@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+
+About Us - BRAND
+
+{% endblock %}
+
+{% block content %}
+
+<div class="">
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h5 class="text-white">Categories</h5>
+        <!--Accordion wrapper-->
+        <div class="accordion md-accordion accordion-3 z-depth-1-half" id="accordionEx194" role="tablist"
+          aria-multiselectable="true">
+
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="heading4">
+              <span data-toggle="collapse" data-parent="#accordionEx194" href="#collapse4" aria-expanded="false"
+                aria-controls="collapse4">
+                <h5 class="mb-0 text-white">
+                  Riding
+                </h5>
+              </span>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapse4" class="collapse show" role="tabpanel" aria-labelledby="heading4"
+              data-parent="#accordionEx194">
+              <div class="card-body pt-0">
+                <ul>
+                     {% for el in riding %}
+              <li>
+                <a href='/products/riding/{{el.slug}}'>{{el.title}}</a>
+              </li>
+              {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion card -->
+
+
+
+        </div>
+        <!--/.Accordion wrapper-->
+      </div>
+      <div class="col-12 col-md-8">
+        <h4 class="text-white">About Us</h4>
+        <p class="text-white">At BRAND We are producing Horse Riding Goods, Horse Drawn Carriages Parts /Accessories for
+          Driver and Horse,
+          Farrier Tools and Veterinary Instruments of high quality from last 17 years and serving needs &amp; wants of
+          our esteemed customers by exploiting our Generations Metal Work Experience. You are welcome with any of
+          related product inquiry which will be served with full dedication and devotion.</p>
+        <p class="text-white">From last 6 years we had developed our new range of leather/amara/cotton/synthetics made
+          Gloves, Hats, Caps,
+          Mini Chaps, Security Vest, and other apparels which got a lot of appreciation from our clients.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+{% endblock %}

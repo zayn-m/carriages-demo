@@ -1,0 +1,12 @@
+nav {
+    background-color: #74371A;
+    height: 40px;
+}
+
+.nav-link {
+    font-size: 12px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}

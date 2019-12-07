@@ -1,0 +1,15 @@
+footer {
+	background-color: #0f0707;
+	color: white;
+}
+
+footer .footer-contact {
+	text-decoration: none;
+	list-style: none;
+	left: 0;
+	padding-left: 0;
+}
+
+.footer-bottom {
+	background-color: #222222;
+}
